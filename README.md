@@ -1,0 +1,2 @@
+# rustempython
+классы в python

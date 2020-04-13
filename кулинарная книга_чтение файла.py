@@ -70,7 +70,7 @@ def get_shop_list_by_dishes(dishname, count, dict):
                 for foods in ingredient:
                     for food in foods:
                         if food == 'quantity':
-                            foods[food] = foods[food] * person_count
+                            foods[food] = foods[food] * person_count * 2
 
             # убираем дубли
             for ingredient in cooking_list:
@@ -106,11 +106,11 @@ def get_shop_list_by_dishes(dishname, count, dict):
         print('\nУ вас сегодня не будет гостей, можете не готовить и посмотреть телевизор')
 
 # начало программы
-cook_book = {}
-cook_book_foods = []
-item = 0
-i = 0
 with open('ingredients_list.txt', 'r', encoding="utf8") as f:
+    cook_book = {}
+    cook_book_foods = []
+    item = 0
+    i = 0
     while i < 4:
         name = f.readline().strip()
         count = int(f.readline().strip())
@@ -127,6 +127,8 @@ with open('ingredients_list.txt', 'r', encoding="utf8") as f:
         cook_book_foods = []
         item = 0
 
+
+# Важно запускать только одну функцию!
 # get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'], 2, cook_book)
 # get_shop_list_by_dishes(['Фахитос', 'Омлет'], 2, cook_book)
 get_shop_list_by_dishes(['Омлет', 'Омлет'], 2, cook_book)

@@ -2,7 +2,7 @@ import psycopg2
 
 
 def get_connection():
-    conn = psycopg2.connect(database='rus22344510', user='rus22344510', password='1222', host='pg.codecontrol.ru', port=59432)
+    conn = psycopg2.connect(database='', user='', password='', host='pg.codecontrol.ru', port=59432)
     conn.autocommit = True
     cursor = conn.cursor()
     return conn, cursor
